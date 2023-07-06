@@ -144,7 +144,7 @@ header .btn {
   font-size: 0.8em;
 }
 
-.recipes {
+.toys {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 30px;
@@ -153,7 +153,7 @@ header .btn {
   max-width: 1200px;
 }
 
-.recipe {
+.toy {
   display: inline-block;
   border-radius: 20px;
   background: white;
@@ -162,7 +162,7 @@ header .btn {
   padding: 0 20px 30px 20px
 }
 
-.recipe img {
+.toy img {
   width: 100px;
   margin: -30px auto 20px;
 }

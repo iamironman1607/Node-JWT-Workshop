@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express();
 const path = require('path');
-const conn = require('./config/db');
+const DB = require('./config/db');
 const cookiesPaerser = require('cookie-parser');
 
 app.set('view engine', 'ejs');
@@ -22,11 +22,11 @@ app.get('/smoothies', verifyAuth, checkUser, (req, res, next) => {
     res.render('smoothies');
 })
 
-conn.connection.on('error', (err) => {
+DB.connection.on('error', (err) => {
 
     console.log("Could not connect to DB", err.message);
 })
-conn.connection.once('open', () => {
+DB.connection.on('open', () => {
 
     app.listen(3000, () => {
         console.log("Server up at 3000");
